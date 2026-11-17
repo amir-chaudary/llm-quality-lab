@@ -14,9 +14,15 @@ CLAUDE.local.md
 
 # Secrets and env
 .env
+.env.*
+!.env.example
 .envrc
 
 # Scratch and raw data
 scratch/
 data/traces/
 .DS_Store
+
+# DeepEval local state
+.deepeval/
+.deepeval-cache.json
