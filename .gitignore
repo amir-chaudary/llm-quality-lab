@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Claude Code local context
+CLAUDE.local.md
+
+# Secrets and env
+.env
+.envrc
+
+# Scratch and raw data
+scratch/
+data/traces/
+.DS_Store
