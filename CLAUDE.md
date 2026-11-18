@@ -1,8 +1,9 @@
 # LLM Quality Lab
 
-Personal learning repository for a 14-week transition from traditional QA into
+Personal learning repository for a 24-week transition from traditional QA into
 LLM and AI quality engineering. Solo project, no other contributors.
-Plan runs 16 November 2026 to 21 February 2027.
+Plan runs 18 November 2026 to 4 May 2027 in three stages: eight weeks of Python
+only, six braided weeks, then ten weeks of LLM quality engineering.
 
 ## Learning contract - read this first
 
@@ -20,10 +21,12 @@ Optimise for my understanding, not for throughput.
 
 ## Current phase
 
-**Phase 0 (16-29 Nov 2026): environment setup, Python and LLM foundations.**
+**Stage A (18 Nov 2026 - 12 Jan 2027): Python from the ground up. No LLM work.**
 
-Update this line at the start of each phase. It tells you what I should and
-should not already know, so you can pitch explanations correctly.
+Week 1: mechanics. Week 2: control flow and collections. Week 3: functions.
+Week 4: comprehensions and generators. Week 5: modules and stdlib.
+Week 6: classes. Week 7: exceptions, context managers, decorators.
+Week 8: files, testing, capstone project.
 
 ## Stack
 
@@ -40,6 +43,8 @@ should not already know, so you can pitch explanations correctly.
 ## Layout
 
 ```
+practice/       Stage A exercises, one package per week, all pytest-based
+practice/GAPS.md  every wrong prediction, drives the weekly checkpoints
 src/app/        system under test: RAG pipeline, agent, FastAPI service
 src/evals/      custom metrics, judge prompts, calibration scripts
 tests/          pytest suites including DeepEval test cases
@@ -74,7 +79,7 @@ colima start                       start the container runtime
 - Type hints on every function. Pydantic models over dicts for anything crossing
   a boundary.
 - Never commit `.env`, API keys, raw traces, or client material.
-- Tag at the end of each phase: `v0.1` through `v1.0`.
+- Tag at the end of each stage: `v0.1.0-python`, then `v0.2` through `v1.0`.
 
 ## Cost discipline
 
@@ -89,8 +94,31 @@ API calls cost real money and I am on a capped monthly budget.
 ## What I already know
 
 18 years in QA: test design, risk-based testing, defect lifecycle, Playwright,
-CI pipelines, ISO 9001, Agile QA. Comfortable with Python and Node at a
-scripting level, moving to engineering level.
+CI pipelines, ISO 9001, Agile QA. Built a Rust and Playwright test automation
+framework at a previous employer.
 
-Assume competence on testing fundamentals. Explain LLM-specific concepts, not
-QA ones. Do not explain what a fixture or a regression suite is.
+So: assume competence on testing concepts, programming concepts, debugging
+method, version control and architecture. Do not explain what a regression
+suite, a race condition or a stack trace is.
+
+But do NOT assume Python fluency. My Python is being rebuilt from the ground
+up. Explain Python syntax, idiom and standard library as if new. Where a
+concept exists in another language I know, name the parallel rather than
+explaining the concept from scratch.
+
+## Stage A rules - delete this section on 13 January 2027
+
+Do not write Python for me. Explain the concept, show a two-line illustrative
+snippet, and let me write the implementation. Review what I write and name
+what is weak.
+
+I am learning Python properly from the ground up, not refreshing it. A cold
+diagnostic came back short, so do not assume I know something because I have
+18 years in IT. Check rather than assume.
+
+Do not suggest DeepEval, Promptfoo, RAGAS or Langfuse during Stage A. They are
+in the stack above for context only and are not touched until Stage B, which
+starts 13 January 2027.
+
+Every wrong prediction I make goes in practice/GAPS.md. If you spot a
+misconception I have not recorded, say so and tell me to add it.
